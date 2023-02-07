@@ -118,7 +118,7 @@ def main_page():
 #    raw_data["What is your LinkedIn profile image?"][0]
 
 
-    img = os.path.abspath("images/profile_pic - Christian Wanser.png")
+    img = os.path.abspath("images/Christian Wanser.png")
     linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
     
 #    st.image(img,width=100)
