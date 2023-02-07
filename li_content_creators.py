@@ -121,10 +121,10 @@ def main_page():
     img = os.path.abspath("images/profile_pic - Christian Wanser.png")
     linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
     
-    st.image(img,width=100)
+#    st.image(img,width=100)
 
     gif_html = get_img_with_href(img,linkedin_profile_url)
-    st.markdown(gif_html, unsafe_allow_html=True)
+    st.markdown(gif_html, unsafe_allow_html=True,width=100)
     
 
 def page2():
