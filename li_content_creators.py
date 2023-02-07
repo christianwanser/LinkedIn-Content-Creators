@@ -6,6 +6,9 @@ import streamlit as st
 
 import pandas as pd
 
+import urllib.request
+from PIL import Image
+
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 #from pprint import pprint as pp
