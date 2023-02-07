@@ -84,7 +84,7 @@ def main_page():
 
     st.dataframe(raw_data)
     
-    survey_qs
+    survey_qs[0]
     
     st.write("How long have you been creating data content on LinkedIn?")
 
