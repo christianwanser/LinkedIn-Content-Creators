@@ -102,7 +102,7 @@ def main_page():
     file = open(fname, "wb")
     file.write(response.content)
     file.close()
-    file
+    Image.open(file)
 
 def page2():
 
