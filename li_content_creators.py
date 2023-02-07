@@ -81,13 +81,13 @@ def main_page():
 
     col0,col1,col2,col3,col4,col5,col6,col7,col8 = st.columns([2,1,1,1,1,1,1,1,1])
     with col1:
+        st.write("col1")
+        
         img = os.path.abspath("images/Christian Wanser.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
 
         gif_html = get_img_with_href(img,linkedin_profile_url)
         st.markdown(gif_html, unsafe_allow_html=True)
-        
-        st.write("col1")
         
     with col2:
         st.write("col2")
