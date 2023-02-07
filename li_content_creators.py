@@ -9,6 +9,8 @@ import pandas as pd
 from PIL import Image
 import requests
 
+from urllib.request import urlopen
+
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 #from pprint import pprint as pp
@@ -97,12 +99,9 @@ def main_page():
 #    im = Image.open(requests.get(url, stream=True).raw)
 
     response = requests.get(url)
-    _, extension = response.headers["content-type"].split("/")
-    fname = f"sample_image.{extension}"
-    file = open(fname, "wb")
-    file.write(response.content)
-    im = Image.open(file)
-    file.close()
+    
+    
+
 
 def page2():
 
