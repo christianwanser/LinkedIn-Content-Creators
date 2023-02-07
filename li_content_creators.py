@@ -84,6 +84,29 @@ def main_page():
 
         gif_html = get_img_with_href(img,linkedin_profile_url)
         st.markdown(gif_html, unsafe_allow_html=True)
+        
+        st.write("col1")
+        
+    with col2:
+        st.write("col2")
+        
+    with col3:
+        st.write("col3")
+        
+    with col4:
+        st.write("col4")
+        
+    with col5:
+        st.write("col5")
+        
+    with col6:
+        st.write("col6")
+        
+    with col7:
+        st.write("col7")
+        
+    with col8:
+        st.write("col8")
 
 #    with col2:
 #        st.write("# LinkedIn Engagement")
