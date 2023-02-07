@@ -66,8 +66,9 @@ def get_img_with_href(local_img_path, target_url):
     img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
     bin_str = get_base64_of_bin_file(local_img_path)
     html_code = f'''
-        <a href="{target_url}" style="max-width:100px;">
+        <a href="{target_url}" >
             <img src="data:image/{img_format};base64,{bin_str}"
+            width="100"
                 />
         </a>'''
     return html_code
