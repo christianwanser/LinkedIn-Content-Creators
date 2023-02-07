@@ -6,6 +6,10 @@ import streamlit as st
 
 import pandas as pd
 
+import numpy as np
+
+from PIL import Image, ImageDraw
+
 #from PIL import Image
 #import requests
 #
@@ -104,8 +108,25 @@ def main_page():
     
 #    img = Image.open(urlopen(url))
 
+    img = os.path.abspath("images/profile_pic - Christian Wanser.png")
     
-    st.image(os.path.abspath("images/profile_pic - Christian Wanser.png"),width=100)
+#    st.image(img,width=100)
+    
+    
+    img=Image.open(img)
+    display(img)
+      
+    height,width = img.size
+    lum_img = Image.new('L', [height,width] , 0)
+      
+    draw = ImageDraw.Draw(lum_img)
+    draw.pieslice([(0,0), (height,width)], 0, 360,
+                  fill = 255, outline = "white")
+    img_arr =np.array(img)
+    lum_img_arr =np.array(lum_img)
+    display(Image.fromarray(lum_img_arr))
+    final_img_arr = np.dstack((img_arr,lum_img_arr))
+    display(Image.fromarray(final_img_arr))
 
 
 def page2():
