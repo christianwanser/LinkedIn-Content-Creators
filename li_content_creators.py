@@ -56,13 +56,11 @@ raw_data = pd.DataFrame(data_json)
 # Survey Questions
 
 survey_qs_list = list(data_json[0].keys())
-survey_qs = []
+survey_qs = {}
 
-#for i in range(0,1):
-#    st.write(i)
-#    survey_qs[i] = {"Original Q": survey_qs_list[i]}
-
-survey_qs[0] = {"Original Q": survey_qs_list[0]}
+for i in range(0,len(survey_qs_list)):
+    st.write(i)
+    survey_qs[i] = {"Original Q": survey_qs_list[i]}
 
 
 # enable html links in profile pics
