@@ -114,7 +114,7 @@ def main_page():
     
     
     img=Image.open(img)
-    display(img)
+#    display(img)
       
     height,width = img.size
     lum_img = Image.new('L', [height,width] , 0)
