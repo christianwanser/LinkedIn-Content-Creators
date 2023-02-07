@@ -75,6 +75,8 @@ def main_page():
     st.write("hi")
     st.write("hello")
     
+    data[0]{"What is your LinkedIn profile image?"}
+    
     data
     
 
