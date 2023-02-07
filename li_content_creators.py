@@ -1,5 +1,7 @@
 import os
 
+import re
+
 import base64
 
 #import openpyxl
@@ -56,13 +58,10 @@ raw_data = pd.DataFrame(data_json)
 # Survey Questions
 
 survey_qs_list = list(data_json[0].keys())
-survey_qs = {}
-
-for i in range(0,len(survey_qs_list)):
-    st.write(i)
-    survey_qs[i] = {"Original Q": survey_qs_list[i]}
     
 survey_qs = pd.DataFrame(survey_qs_list,columns=["Original Q"])
+
+survey_qs["New Q"] = [
 
 
 # enable html links in profile pics
