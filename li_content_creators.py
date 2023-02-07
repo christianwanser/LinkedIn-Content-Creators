@@ -101,8 +101,8 @@ def main_page():
     fname = f"sample_image.{extension}"
     file = open(fname, "wb")
     file.write(response.content)
-    file.close()
     im = Image.open(file)
+    file.close()
 
 def page2():
 
