@@ -6,7 +6,7 @@ import streamlit as st
 
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from pprint import pprint as pp
+#from pprint import pprint as pp
 
 #from PIL import Image
 
@@ -75,7 +75,7 @@ def main_page():
     st.write("hi")
     st.write("hello")
     
-    pp(data)
+    data
     
 
 def page2():
