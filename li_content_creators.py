@@ -34,7 +34,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json",scope)
 client = gspread.authorize(creds)
 
 sheet = client.open("LinkedIn Data Content Creators").worksheet("Form Responses")
-data = sheet.get_all_records()
+data_json = sheet.get_all_records()
 
 
 def main_page():
@@ -75,9 +75,11 @@ def main_page():
     st.write("hi")
     st.write("hello")
     
-    data[0]{"What is your LinkedIn profile image?"}
+    raw_data = pd.DataFrame.from_dict(data_json, orient="index")
     
-    data
+    raw_data
+    
+    
     
 
 def page2():
