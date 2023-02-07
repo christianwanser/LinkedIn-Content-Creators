@@ -58,7 +58,7 @@ raw_data = pd.DataFrame(data_json)
 survey_qs_list = list(data_json[0].keys())
 survey_qs = {}
 
-for i in range(0,len(survey_qs_list)):
+for i in range(0,len(survey_qs_list)-1):
     st.write(i)
     survey_qs[i] = {"Original Q": survey_qs_list[i]}
 
