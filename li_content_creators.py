@@ -55,7 +55,7 @@ raw_data = pd.DataFrame(data_json)
 
 # Survey Questions
 
-survey_qs = data_json[0].keys()
+survey_qs = list(data_json[0].keys())
 
 
 # enable html links in profile pics
