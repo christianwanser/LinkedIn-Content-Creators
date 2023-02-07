@@ -1,4 +1,4 @@
-#import os
+import os
 
 #import openpyxl
 
@@ -88,9 +88,9 @@ def main_page():
     
     raw_data
     
-    raw_data["What is your LinkedIn profile image?"][0]
+#    raw_data["What is your LinkedIn profile image?"][0]
     
-    url = raw_data["What is your LinkedIn profile image?"][0]
+#    url = raw_data["What is your LinkedIn profile image?"][0]
 
 #    url = 'https://media.licdn.com/dms/image/D4E03AQEaQTGrL67Yog/profile-displayphoto-shrink_400_400/0/1666678687733?e=1681344000&v=beta&t=x7XQS96qKTx0BzuT0mmk78yBrf4pphi6MgLslA8iVak.png'
 
@@ -102,8 +102,10 @@ def main_page():
 
 #    response = requests.get(url)
     
-    img = Image.open(urlopen(url))
-    st.image(img)
+#    img = Image.open(urlopen(url))
+
+    
+    st.image(os.path.abspath("images/profile_pic - Christian Wanser.png"),width=100)
 
 
 def page2():
