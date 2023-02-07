@@ -53,6 +53,11 @@ raw_data = pd.DataFrame(data_json)
 
 
 
+# Survey Questions
+
+survey_qs = data_json
+
+
 # enable html links in profile pics
 
 @st.cache(allow_output_mutation=True)
@@ -78,6 +83,8 @@ def main_page():
 
 
     st.dataframe(raw_data)
+    
+    survey_qs
     
     st.write("How long have you been creating data content on LinkedIn?")
 
