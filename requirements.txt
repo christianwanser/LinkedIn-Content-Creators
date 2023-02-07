@@ -2,6 +2,6 @@ streamlit==1.17.0
 gspread
 oauth2client
 pandas
-PIL
+Pillow
 requests
 io
