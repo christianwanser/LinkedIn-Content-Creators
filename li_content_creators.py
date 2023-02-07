@@ -91,7 +91,7 @@ def main_page():
         
         st.write("Christian Wanser")
         
-        st.write('<p style="font-size:10px; color:red;">"""Christian<br>Wanser<br>"""</p>',unsafe_allow_html=True)
+        st.write('<p style="font-size:12px; color:black;">Christian<br>Wanser<br></p>',unsafe_allow_html=True)
         
         img = os.path.abspath("images/Matt Mike.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/matthewmike/'
@@ -101,7 +101,7 @@ def main_page():
         
         st.write("Matt Mike")
         
-        st.write('<p style="font-size:10px; color:red;">"""Matt<br>Mike<br>"""</p>',unsafe_allow_html=True)
+        st.write('<p style="font-size:12px; color:black;">Matt<br>Mike<br></p>',unsafe_allow_html=True)
         
     with col2:
         st.write("col2")
