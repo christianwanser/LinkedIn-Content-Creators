@@ -62,7 +62,7 @@ for i in range(0,len(survey_qs_list)):
     st.write(i)
     survey_qs[i] = {"Original Q": survey_qs_list[i]}
     
-survey_qs = pd.DataFrame(survey_qs_list)
+survey_qs = pd.DataFrame(survey_qs_list,columns=["Original Q"])
 
 
 # enable html links in profile pics
