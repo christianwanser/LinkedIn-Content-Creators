@@ -50,6 +50,27 @@ sheet = client.open("LinkedIn Data Content Creators").worksheet("Form Responses"
 data_json = sheet.get_all_records()
 
 
+
+
+# enable html links in profile pics
+
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+@st.cache(allow_output_mutation=True)
+def get_img_with_href(local_img_path, target_url):
+    img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
+    bin_str = get_base64_of_bin_file(local_img_path)
+    html_code = f'''
+        <a href="{target_url}">
+            <img src="data:image/{img_format};base64,{bin_str}" />
+        </a>'''
+    return html_code
+
+
 def main_page():
 
     col1, mid, col2 = st.columns([1,2,20])
@@ -95,43 +116,14 @@ def main_page():
     raw_data
     
 #    raw_data["What is your LinkedIn profile image?"][0]
-    
-#    url = raw_data["What is your LinkedIn profile image?"][0]
 
-#    url = 'https://media.licdn.com/dms/image/D4E03AQEaQTGrL67Yog/profile-displayphoto-shrink_400_400/0/1666678687733?e=1681344000&v=beta&t=x7XQS96qKTx0BzuT0mmk78yBrf4pphi6MgLslA8iVak.png'
-
-#    url='https://static.wixstatic.com/media/1a093c_56e2a2cfc0b84b1cbd05e6f3fb2da2ad~mv2_d_1232_1366_s_2.png/v1/fill/w_356,h_380,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cat-cutout.png'
-#    response = requests.get(url)
-#    Image.open(response.raw)
-
-#    im = Image.open(requests.get(url, stream=True).raw)
-
-#    response = requests.get(url)
-    
-#    img = Image.open(urlopen(url))
 
     img = os.path.abspath("images/profile_pic - Christian Wanser.png")
+    linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
     
     st.image(img,width=100)
-    
-    
-    @st.cache(allow_output_mutation=True)
-    def get_base64_of_bin_file(bin_file):
-        with open(bin_file, 'rb') as f:
-            data = f.read()
-        return base64.b64encode(data).decode()
 
-    @st.cache(allow_output_mutation=True)
-    def get_img_with_href(local_img_path, target_url):
-        img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
-        bin_str = get_base64_of_bin_file(local_img_path)
-        html_code = f'''
-            <a href="{target_url}">
-                <img src="data:image/{img_format};base64,{bin_str}" />
-            </a>'''
-        return html_code
-
-    gif_html = get_img_with_href(img, 'https://www.linkedin.com/in/christian-wanser/')
+    gif_html = get_img_with_href(img,linkedin_profile_url)
     st.markdown(gif_html, unsafe_allow_html=True)
     
 
