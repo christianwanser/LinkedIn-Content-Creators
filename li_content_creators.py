@@ -129,7 +129,7 @@ def main_page():
     st.image(Image.fromarray(lum_img_arr))
     final_img_arr = np.dstack((img_arr,lum_img_arr))
 #    display(Image.fromarray(final_img_arr))
-    st.image(Image.fromarray((final_img_arr * 255).astype(np.uint8))
+    st.image(Image.fromarray((final_img_arr * 255).astype(np.uint8)))
 
 def page2():
 
