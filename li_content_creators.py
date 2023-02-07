@@ -85,7 +85,7 @@ def main_page():
         gif_html = get_img_with_href(img,linkedin_profile_url)
         st.markdown(gif_html, unsafe_allow_html=True)
 
-    with col2:
+#    with col2:
 #        st.write("# LinkedIn Engagement")
 #
 #    # sidebar
