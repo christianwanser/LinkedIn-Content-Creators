@@ -83,6 +83,8 @@ def main_page():
     
     raw_data
     
+    raw_data["What is your LinkedIn profile image?"]
+    
     
     
 
