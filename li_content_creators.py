@@ -58,8 +58,8 @@ raw_data = pd.DataFrame(data_json)
 survey_qs_list = list(data_json[0].keys())
 survey_qs = []
 
-for i in range(0,len(survey_qs_list)-1):
-    survey_qs[i] = {"Original Q": survey_qs_list[i]}
+#for i in range(0,len(survey_qs_list)-1):
+#    survey_qs[i] = {"Original Q": survey_qs_list[i]}
 
 
 # enable html links in profile pics
@@ -89,6 +89,8 @@ def main_page():
     st.dataframe(raw_data)
     
     survey_qs
+    
+    survey_qs_list[30]
     
     st.write("How long have you been creating data content on LinkedIn?")
 
