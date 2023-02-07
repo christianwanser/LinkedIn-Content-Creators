@@ -4,6 +4,8 @@
 
 import streamlit as st
 
+import pandas as pd
+
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 #from pprint import pprint as pp
