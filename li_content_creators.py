@@ -5,6 +5,8 @@
 import streamlit as st
 
 import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+from pprint import pprint as pp
 
 #from PIL import Image
 
@@ -25,6 +27,14 @@ import gspread
 #import streamlit.components.v1 as components
 #
 #import altair as alt
+
+scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
+
+creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json",scope)
+client = gspread.authorize(creds)
+
+sheet = client.open("LinkedIn Data Content Creators").worksheet("Form Responses")
+data = sheet.get_all_records()
 
 
 def main_page():
@@ -65,9 +75,7 @@ def main_page():
     st.write("hi")
     st.write("hello")
     
-    gc = gspread.service_account()
-    
-    wks = gc.open("LinkedIn Data Content Creators").worksheet("Form Responses")
+    pp(data)
     
 
 def page2():

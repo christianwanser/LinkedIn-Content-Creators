@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "linkedin-data-content-creators",
+  "private_key_id": "c5cca71dbbfa1e5ab67be6c548037678e3dad292",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbFFqdqqY9rtc/\np8tQVdjqKLcFodmYdbiPT+uMDJPAqXNbc75BpyuL/uCEozN0tTO9Tnm+HW9C5ORz\nKXc1lVVMit694f/qpj1o7VwH0J6zRqWW8/KTBWjprTh/u80yXf6TviH8HjybVSsL\ntoKCRL166AZ11nPBALaXqKDs49eLmmZBu9Whnu8iHnEWPHg49LgzXSxdQCZnCyfz\nAFXXylIVG4ELAgXJfwiVdvfgilZtTG/3weEHoWvGbD8EVS+pHzl1tWIzA5yThj8R\nQBGr2d1rz8HNg6j1mx1xnUFKiugVSbvQnwtT7knclJPOvXYX4hyGAGOOGZw9/pvn\n3wkkPprzAgMBAAECggEACjFRIl4pQnWeSk+UtbKgynHFfh7j5rEUOqEY9n8y52pO\nCMNPgHKpVufI61lEEIB9UHS67kqK5CP0SwImK5lWJB8Ff1q17OVggwxUCIFyXyka\nYcKmY3FQSo4gGRutz6Bjstz/a/rxWx3w+3UGbzTvU3oORUo9pw03V/WYMx1KNUXB\nT2u9A+cjnW/AcV7UHBqkzVMIsdOEYliBwvJlTL9CRdHrYSej7WjlMSRzvFhrDK9U\nKwwwAodrT0E/EQWaG5LhAdGGssD+wFTVClbMzvm/5xXDczDe3x7+M63hCm4uIxft\nf1ZFQb+F6smS1rmWcxbXtyzJqc+zAN4o2Un4aKYDlQKBgQD/WcJOWZJ3pIzsy3Xt\nMzuvlFeETq/Vs8BavoQZPQ2YxzvqUz7m/oPcU9iFgMUh8t4IoSEU4ueQJ7a7LtB8\nPdonyfUGp01wSN3Bq/KZWWNi7OksTh1OfbK6egGNboESkdw5fMJ3B/dwFTp/hv+s\nA2e4FXWOB/IOEqef1GxJzLUzxQKBgQDbovs60yGFsKbpSwvv3xSMdwmmvfhmCZpe\nfe2RwJTB8gOoXBxUE909xF1p77jlocSZocZ7XWvU1HAwJWzLkVaIvfe+fCVo/e3i\nbR2muFNcNW5NFAoaKAYH2UAK6oC5FkZ+d+qZ2m+yMxBcYEnvq6OOoK0E4IosLuto\nBtG0mhsnVwKBgQDqjmDV56GLFTP+L8bbZDxnRDQ/7KfH/Z2rvWVKabKbrCd1T5Jw\nTUqCkOJLf8WVMaqS8q+Yp/VdjZ1kw9PuzEIgWnsg6X1Qrx5EUNY/1sRckpJ9iCOT\nfhM3B+t1JxSZIjLQ+7EF9eNsqZNaoX8pWtdjWRLqrJHEK46eWlo+UDQCoQKBgAEu\n2o2Rj4+pyOxexByxpemvxnSId2sNSDCUGxB66hI1XIGupVRqmvl3Mk2cxfEusuFk\n9q25bhhCYKxRt0lNahrocwoqnwT2wS5ECjHYslI/021E210StB2ctPSaGMFmdlC+\nEpxrich67+6fciaBVSsygFwTXYspYYk46C5B2j2XAoGAHFGnrN0G9jjRYGLD7+wf\nf+0YKntJp9/xZIC6zf61RknAblQoTMoTdi4OuI1Jl00fmp+4GVtju2UwX5uBrMEs\ntcnFNNi2/IQbNG7VBapO0/miR4aWHCH8zPnjIYqWajU+iGuuvvoQ/Ws3nMmpD/UM\n24jXMkfV0kp66M6Ob89DA88=\n-----END PRIVATE KEY-----\n",
+  "client_email": "app-call-linkedin-data-content@linkedin-data-content-creators.iam.gserviceaccount.com",
+  "client_id": "116952826596659804468",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/app-call-linkedin-data-content%40linkedin-data-content-creators.iam.gserviceaccount.com"
+}
