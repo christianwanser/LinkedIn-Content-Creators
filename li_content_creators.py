@@ -78,8 +78,10 @@ def main_page():
 
 
     st.dataframe(raw_data)
+    
+    st.write("How long have you been creating data content on LinkedIn?")
 
-    col0,col1,col2,col3,col4,col5,col6,col7,col8 = st.columns([2,1,1,1,1,1,1,1,1])
+    col1,col2,col3,col4,col5,col6,col7,col8 = st.columns([1,1,1,1,1,1,1,1])
     with col1:
         st.write("col1")
         
