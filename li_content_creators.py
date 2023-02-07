@@ -49,6 +49,7 @@ client = gspread.authorize(creds)
 sheet = client.open("LinkedIn Data Content Creators").worksheet("Form Responses")
 data_json = sheet.get_all_records()
 
+raw_data = pd.DataFrame(data_json)
 
 
 
@@ -73,13 +74,19 @@ def get_img_with_href(local_img_path, target_url):
 
 def main_page():
 
+
+    st.dataframe(raw_data)
+
     col1, mid, col2 = st.columns([1,2,20])
-#    #with col1:
-#        #st.image(os.path.abspath("images/LI logo.png"),
-#            #width=100)
-#
-#    #with col2:
-#        #st.write("# LinkedIn Engagement")
+    with col1:
+        img = os.path.abspath("images/Christian Wanser.png")
+        linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
+
+        gif_html = get_img_with_href(img,linkedin_profile_url)
+        st.markdown(gif_html, unsafe_allow_html=True)
+
+    with col2:
+        st.write("# LinkedIn Engagement")
 #
 #    # sidebar
 #
@@ -105,26 +112,13 @@ def main_page():
 #
 #    st.markdown("**Track your post performance** over time by analyzing engagements, impressions, and the percent engagement per impression.")
 #    st.markdown("**Click** on any data point and **you're brought to that post's link!**")
-
-    st.write("hi")
-    st.write("hello")
     
 #    data_json
-        
-    raw_data = pd.DataFrame(data_json)
-    
-    st.dataframe(raw_data)
     
 #    raw_data["What is your LinkedIn profile image?"][0]
 
 
-    img = os.path.abspath("images/Christian Wanser.png")
-    linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
-    
-#    st.image(img,width=100)
 
-    gif_html = get_img_with_href(img,linkedin_profile_url)
-    st.markdown(gif_html, unsafe_allow_html=True)
     
 
 def page2():
