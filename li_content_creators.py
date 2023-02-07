@@ -94,9 +94,8 @@ def main_page():
 #    response = requests.get(url)
 #    Image.open(response.raw)
 
-#    im = Image.open(requests.get(url, stream=True).raw)
-    
-    im = Image.open(requests.get(url, stream=True))
+    im = Image.open(requests.get(url, stream=True).raw)
+
 
 def page2():
 
