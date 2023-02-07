@@ -4,6 +4,8 @@
 
 import streamlit as st
 
+import gspread
+
 #from PIL import Image
 
 #import numpy as np
@@ -63,7 +65,9 @@ def main_page():
     st.write("hi")
     st.write("hello")
     
+    gc = gspread.service_account()
     
+    wks = gc.open("LinkedIn Data Content Creators").worksheet("Form Responses")
     
 
 def page2():
