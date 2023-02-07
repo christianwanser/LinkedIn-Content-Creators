@@ -79,7 +79,9 @@ def main_page():
     
     data_json
     
-    raw_data = pd.DataFrame.from_dict(data_json, orient="index")
+#    raw_data = pd.DataFrame.from_dict(data_json, orient="index")
+    
+    raw_data = pd.DataFrame(data_json)
     
     raw_data
     
