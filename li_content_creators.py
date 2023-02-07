@@ -89,7 +89,7 @@ def main_page():
         gif_html = get_img_with_href(img,linkedin_profile_url)
         st.markdown(gif_html, unsafe_allow_html=True)
         
-        img = os.path.abspath("images/Matt Mike")
+        img = os.path.abspath("images/Matt Mike.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/matthewmike/'
 
         gif_html = get_img_with_href(img,linkedin_profile_url)
