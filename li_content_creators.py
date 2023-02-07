@@ -88,6 +88,7 @@ def main_page():
     
     raw_data["What is your LinkedIn profile image?"][0]
     
+    url = raw_data["What is your LinkedIn profile image?"][0]
     response = requests.get(url)
     Image.open(response.raw)
     
