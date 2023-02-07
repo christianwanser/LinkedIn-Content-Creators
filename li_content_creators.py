@@ -68,7 +68,7 @@ def get_img_with_href(local_img_path, target_url):
     html_code = f'''
         <a href="{target_url}" >
             <img src="data:image/{img_format};base64,{bin_str}"
-            width="100"
+            width="40"
                 />
         </a>'''
     return html_code
