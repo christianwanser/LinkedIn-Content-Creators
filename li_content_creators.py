@@ -77,7 +77,7 @@ def main_page():
 
     st.dataframe(raw_data)
 
-    col1, mid, col2 = st.columns([1,2,20])
+    col0,col1,col2,col3,col4,col5,col6,col7,col8 = st.columns([2,1,1,1,1,1,1,1,1])
     with col1:
         img = os.path.abspath("images/Christian Wanser.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
@@ -86,7 +86,7 @@ def main_page():
         st.markdown(gif_html, unsafe_allow_html=True)
 
     with col2:
-        st.write("# LinkedIn Engagement")
+#        st.write("# LinkedIn Engagement")
 #
 #    # sidebar
 #
