@@ -101,7 +101,7 @@ def main_page():
 #    response = requests.get(url)
     
     img = Image.open(urlopen(url))
-    img
+    st.image(img)
 
 
 def page2():
