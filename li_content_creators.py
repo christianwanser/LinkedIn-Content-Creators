@@ -115,6 +115,7 @@ def main_page():
     
     img=Image.open(img)
 #    display(img)
+    st.image(img)
       
     height,width = img.size
     lum_img = Image.new('L', [height,width] , 0)
@@ -124,10 +125,11 @@ def main_page():
                   fill = 255, outline = "white")
     img_arr =np.array(img)
     lum_img_arr =np.array(lum_img)
-    display(Image.fromarray(lum_img_arr))
+#    display(Image.fromarray(lum_img_arr))
+    st.image(Image.fromarray(lum_img_arr))
     final_img_arr = np.dstack((img_arr,lum_img_arr))
-    display(Image.fromarray(final_img_arr))
-
+#    display(Image.fromarray(final_img_arr))
+    st.image(Image.fromarray(final_img_arr))
 
 def page2():
 
