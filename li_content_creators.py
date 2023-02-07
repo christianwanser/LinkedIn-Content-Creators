@@ -90,9 +90,10 @@ def main_page():
     
 #    url = raw_data["What is your LinkedIn profile image?"][0]
     url = 'https://media.licdn.com/dms/image/D4E03AQEaQTGrL67Yog/profile-displayphoto-shrink_400_400/0/1666678687733?e=1681344000&v=beta&t=x7XQS96qKTx0BzuT0mmk78yBrf4pphi6MgLslA8iVak.png'
-    response = requests.get(url)
+#    response = requests.get(url)
 #    Image.open(response.raw)
-    Image.open(response)
+
+    im = Image.open(requests.get(url, stream=True).raw)
     
 
 def page2():
