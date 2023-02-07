@@ -2,7 +2,4 @@ streamlit
 gspread
 oauth2client
 pandas
-Pillow
-requests
-urllib3
 os

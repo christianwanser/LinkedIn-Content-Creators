@@ -6,10 +6,10 @@ import streamlit as st
 
 import pandas as pd
 
-from PIL import Image
-import requests
-
-from urllib.request import urlopen
+#from PIL import Image
+#import requests
+#
+#from urllib.request import urlopen
 
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
