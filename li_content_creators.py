@@ -91,7 +91,7 @@ def main_page():
         
         st.write("Christian Wanser")
         
-        st.write('<p style="font-size:10px; color:red;">This is an example \n of writing text \n on multiple lines \n</p>',unsafe_allow_html=True)
+        st.write('<p style="font-size:10px; color:red;">''This is an example \n of writing text \n on multiple lines \n''</p>',unsafe_allow_html=True)
         
         img = os.path.abspath("images/Matt Mike.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/matthewmike/'
