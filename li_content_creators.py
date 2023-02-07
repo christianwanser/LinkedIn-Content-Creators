@@ -92,15 +92,16 @@ def main_page():
     
 #    url = raw_data["What is your LinkedIn profile image?"][0]
 #    url = 'https://media.licdn.com/dms/image/D4E03AQEaQTGrL67Yog/profile-displayphoto-shrink_400_400/0/1666678687733?e=1681344000&v=beta&t=x7XQS96qKTx0BzuT0mmk78yBrf4pphi6MgLslA8iVak.png'
-    url='https://commons.wikimedia.org/wiki/File:A-Cat.jpg'
+    url='https://static.wixstatic.com/media/1a093c_56e2a2cfc0b84b1cbd05e6f3fb2da2ad~mv2_d_1232_1366_s_2.png/v1/fill/w_356,h_380,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cat-cutout.png'
 #    response = requests.get(url)
 #    Image.open(response.raw)
 
 #    im = Image.open(requests.get(url, stream=True).raw)
 
-    response = requests.get(url)
+#    response = requests.get(url)
     
-    
+    img = Image.open(urlopen(url))
+    img
 
 
 def page2():
