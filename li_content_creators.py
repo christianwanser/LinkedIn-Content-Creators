@@ -77,10 +77,8 @@ def main_page():
     st.write("hi")
     st.write("hello")
     
-    data_json
-    
-#    raw_data = pd.DataFrame.from_dict(data_json, orient="index")
-    
+#    data_json
+        
     raw_data = pd.DataFrame(data_json)
     
     raw_data
