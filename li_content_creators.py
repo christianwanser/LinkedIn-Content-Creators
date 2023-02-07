@@ -113,7 +113,7 @@ def main_page():
         
     raw_data = pd.DataFrame(data_json)
     
-    raw_data
+    st.dataframe(raw_data)
     
 #    raw_data["What is your LinkedIn profile image?"][0]
 
@@ -124,7 +124,7 @@ def main_page():
 #    st.image(img,width=100)
 
     gif_html = get_img_with_href(img,linkedin_profile_url)
-    st.markdown(gif_html, unsafe_allow_html=True,width=100)
+    st.markdown(gif_html, unsafe_allow_html=True)
     
 
 def page2():
