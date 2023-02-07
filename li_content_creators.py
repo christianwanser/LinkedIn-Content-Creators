@@ -94,7 +94,14 @@ def main_page():
 #    response = requests.get(url)
 #    Image.open(response.raw)
 
-    im = Image.open(requests.get(url, stream=True).raw)
+#    im = Image.open(requests.get(url, stream=True).raw)
+
+    response = requests.get(url)
+    _, extension = response.headers["content-type"].split("/")
+    fname = f"sample_image.{extension}"
+    file = open(fname, "wb")
+    file.write(response.content)
+    file.close()
 
 
 def page2():
