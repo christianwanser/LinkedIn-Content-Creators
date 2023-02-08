@@ -61,8 +61,6 @@ survey_qs_list = list(data_json[0].keys())
     
 survey_qs = pd.DataFrame(survey_qs_list,columns=["Original Q"])
 
-survey_qs["New Q"] = [
-
 
 # enable html links in profile pics
 
