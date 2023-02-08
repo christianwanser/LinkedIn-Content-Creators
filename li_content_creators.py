@@ -147,41 +147,12 @@ def main_page():
     st.write("How long have you been creating data content on LinkedIn?")
 
     col0,col1,col2,col3,col4,col5,col6,col7 = st.columns([1,1,1,1,1,1,1,1])
+    
     with col0:
         selected_time = survey_qs["Options"][timeframe][0]
-        st.write(type(selected_time))
-        st.write(selected_time)
-        
-        selected_profiles = data.index[data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
-        
-        st.write(selected_profiles)
-        
-        img = os.path.abspath("images/Christian Wanser.png")
-        linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
-
-        gif_html = get_img_with_href(img,linkedin_profile_url)
-        st.markdown(gif_html, unsafe_allow_html=True)
-        
-        st.write('<p style="font-size:14px; color:black;">Christian<br>Wanser<br></p>',unsafe_allow_html=True)
-        
-        img = os.path.abspath("images/Matt Mike.png")
-        linkedin_profile_url = 'https://www.linkedin.com/in/matthewmike/'
-
-        gif_html = get_img_with_href(img,linkedin_profile_url)
-        st.markdown(gif_html, unsafe_allow_html=True)
-        
-        st.write('<p style="font-size:14px; color:black;">Matt<br>Mike<br></p>',unsafe_allow_html=True)
-        
-    with col1:
-        st.write(survey_qs["Options"][timeframe][1])
-        
-    with col2:
-        selected_time = survey_qs["Options"][timeframe][2]
         st.write(selected_time)
 
         selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
-        
-        st.write(selected_profiles)
         
         for i in selected_profiles:
             profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
@@ -196,20 +167,124 @@ def main_page():
             
 #            st.write('<p style="font-size:14px; color:black;">Christian<br>Wanser<br></p>',unsafe_allow_html=True)
         
+    with col1:
+        selected_time = survey_qs["Options"][timeframe][1]
+        st.write(selected_time)
+
+        selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
+        
+        for i in selected_profiles:
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+            
+            img = os.path.abspath(f'images/{profile_name}.png')
+            linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+
+            gif_html = get_img_with_href(img,linkedin_profile_url)
+            st.markdown(gif_html, unsafe_allow_html=True)
+            
+            st.write(profile_name)
+        
+    with col2:
+        selected_time = survey_qs["Options"][timeframe][2]
+        st.write(selected_time)
+
+        selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
+        
+        for i in selected_profiles:
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+            
+            img = os.path.abspath(f'images/{profile_name}.png')
+            linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+
+            gif_html = get_img_with_href(img,linkedin_profile_url)
+            st.markdown(gif_html, unsafe_allow_html=True)
+            
+            st.write(profile_name)
+        
     with col3:
-        st.write(survey_qs["Options"][timeframe][3])
+        selected_time = survey_qs["Options"][timeframe][3]
+        st.write(selected_time)
+
+        selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
+        
+        for i in selected_profiles:
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+            
+            img = os.path.abspath(f'images/{profile_name}.png')
+            linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+
+            gif_html = get_img_with_href(img,linkedin_profile_url)
+            st.markdown(gif_html, unsafe_allow_html=True)
+            
+            st.write(profile_name)
         
     with col4:
-        st.write(survey_qs["Options"][timeframe][4])
+        selected_time = survey_qs["Options"][timeframe][4]
+        st.write(selected_time)
+
+        selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
+        
+        for i in selected_profiles:
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+            
+            img = os.path.abspath(f'images/{profile_name}.png')
+            linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+
+            gif_html = get_img_with_href(img,linkedin_profile_url)
+            st.markdown(gif_html, unsafe_allow_html=True)
+            
+            st.write(profile_name)
         
     with col5:
-        st.write(survey_qs["Options"][timeframe][5])
+        selected_time = survey_qs["Options"][timeframe][5]
+        st.write(selected_time)
+
+        selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
+        
+        for i in selected_profiles:
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+            
+            img = os.path.abspath(f'images/{profile_name}.png')
+            linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+
+            gif_html = get_img_with_href(img,linkedin_profile_url)
+            st.markdown(gif_html, unsafe_allow_html=True)
+            
+            st.write(profile_name)
         
     with col6:
-        st.write(survey_qs["Options"][timeframe][6])
+        selected_time = survey_qs["Options"][timeframe][6]
+        st.write(selected_time)
+
+        selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
+        
+        for i in selected_profiles:
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+            
+            img = os.path.abspath(f'images/{profile_name}.png')
+            linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+
+            gif_html = get_img_with_href(img,linkedin_profile_url)
+            st.markdown(gif_html, unsafe_allow_html=True)
+            
+            st.write(profile_name)
         
     with col7:
-        st.write(survey_qs["Options"][timeframe][7])
+        selected_time = survey_qs["Options"][timeframe][7]
+        st.write(selected_time)
+
+        selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
+        
+        for i in selected_profiles:
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+            
+            img = os.path.abspath(f'images/{profile_name}.png')
+            linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+
+            gif_html = get_img_with_href(img,linkedin_profile_url)
+            st.markdown(gif_html, unsafe_allow_html=True)
+            
+            st.write(profile_name)
 
 #    with col2:
 #        st.write("# LinkedIn Engagement")
