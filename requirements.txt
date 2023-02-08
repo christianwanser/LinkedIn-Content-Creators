@@ -5,3 +5,4 @@ pandas
 Pillow
 numpy
 regex
+streamlit-aggrid
