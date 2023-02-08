@@ -139,17 +139,21 @@ def page1():
     
     st.write("How long have you been creating data content on LinkedIn?")
 
-    col0,col1,col2,col3,col4,col5,col6,col7 = st.columns([1,1,1,1,1,1,1,1])
+    colt0,colt1,colt2,colt3,colt4,colt5,colt6,colt7 = st.columns([1,1,1,1,1,1,1,1])
     
-    col_list = [col0,col1,col2,col3,col4,col5,col6,col7]
+    colt_list = [colt0,colt1,colt2,colt3,colt4,colt5,colt6,colt7]
     
-    for j in range(0,len(col_list)):
+    for j in range(0,len(colt_list)):
     
-        with col_list[j]:
+        with colt_list[j]:
             selected_time = survey_qs["Options"][timeframe][j]
             st.write(selected_time)
             
     st.markdown("---")
+    
+    col0,col1,col2,col3,col4,col5,col6,col7 = st.columns([1,1,1,1,1,1,1,1])
+    
+    col_list = [col0,col1,col2,col3,col4,col5,col6,col7]
     
     for j in range(0,len(col_list)):
     
