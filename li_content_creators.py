@@ -177,16 +177,15 @@ def main_page():
         
     with col2:
         selected_time = survey_qs["Options"][timeframe][2]
-        st.write(type(selected_time))
         st.write(selected_time)
-        
-#        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
 
         selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
         
-#        selected_profiles = data.loc[data["How long have you been creating data content on LinkedIn?"].str.contains("months", case=False)]
-        
         st.write(selected_profiles)
+        
+        for i in selected_profiles:
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profile[i]]
+            st.write(profile_name)
         
     with col3:
         st.write(survey_qs["Options"][timeframe][3])
