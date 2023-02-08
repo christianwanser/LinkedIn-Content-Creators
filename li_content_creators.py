@@ -66,13 +66,19 @@ survey_qs = pd.DataFrame(survey_qs_list,columns=["Original Q"])
 
 survey_qs["New Q"] = [re.findall('\[(.*?)\]', x)[0] if re.findall('\[(.*?)\]', x) != [] else "" for x in survey_qs["Original Q"]]
 
+follower_count = survey_qs.index[survey_qs["Original Q"].str.contains("followers", case=False)].tolist()[0]
+survey_qs["New Q"][follower_count] = "Follower Count"
+
+timeframe = survey_qs.index[survey_qs["Original Q"].str.contains("long", case=False)].tolist()[0]
+survey_qs["New Q"][timeframe] = "Timeframe"
+
+
 
 # Define Answer Options
 
 survey_qs["Options"] = [["0%","1-25%","26-50%","51-75%","76-100%"] if "percent" in x else "" for x in survey_qs["Original Q"]]
-#followers = survey_qs.loc[survey_qs["Original Q"].str.contains("followers", case=False)]
-followers = survey_qs.index[survey_qs["Original Q"].str.contains("followers", case=False)].tolist()[0]
-survey_qs["New Q"][followers] = "Follower Count"
+survey_qs["Options"][timeframe] = ["1-3 months","4-6 months","7-9 months",
+    "10-12 months","1-2 years","3-4 years","5-10 years","10+ years"]
 
 
 # enable html links in profile pics
@@ -115,9 +121,9 @@ def main_page():
     
     st.write("How long have you been creating data content on LinkedIn?")
 
-    col1,col2,col3,col4,col5,col6,col7,col8 = st.columns([1,1,1,1,1,1,1,1])
-    with col1:
-        st.write("col1")
+    col0,col1,col2,col3,col4,col5,col6,col7 = st.columns([1,1,1,1,1,1,1,1])
+    with col0:
+        st.write(survey_qs["Options"][timeframe][0])
         
         img = os.path.abspath("images/Christian Wanser.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
@@ -135,26 +141,26 @@ def main_page():
         
         st.write('<p style="font-size:14px; color:black;">Matt<br>Mike<br></p>',unsafe_allow_html=True)
         
+    with col1:
+        st.write(survey_qs["Options"][timeframe][1])
+        
     with col2:
-        st.write("col2")
+        st.write(survey_qs["Options"][timeframe][2])
         
     with col3:
-        st.write("col3")
+        st.write(survey_qs["Options"][timeframe][3])
         
     with col4:
-        st.write("col4")
+        st.write(survey_qs["Options"][timeframe][4])
         
     with col5:
-        st.write("col5")
+        st.write(survey_qs["Options"][timeframe][5])
         
     with col6:
-        st.write("col6")
+        st.write(survey_qs["Options"][timeframe][6])
         
     with col7:
-        st.write("col7")
-        
-    with col8:
-        st.write("col8")
+        st.write(survey_qs["Options"][timeframe][7])
 
 #    with col2:
 #        st.write("# LinkedIn Engagement")
