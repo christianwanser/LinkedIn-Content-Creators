@@ -94,7 +94,7 @@ def main_page():
     
     survey_qs
     
-    survey_qs["New Q"][0]
+    survey_qs["New Q"][6]
     
     st.write("How long have you been creating data content on LinkedIn?")
 
