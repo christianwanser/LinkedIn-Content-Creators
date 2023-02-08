@@ -155,13 +155,14 @@ def main_page():
             st.write(selected_time)
 
             selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
-            st.write(selected_profiles)
             for i in selected_profiles:
                 st.write(i)
-                profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+#                profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+                profile_name = data["What is your name (as shown on LinkedIn)?"][i]
                 
                 img = os.path.abspath(f'images/{profile_name}.png')
-                linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+#                linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+                linkedin_profile_url = data["What is your LinkedIn profile URL?"][i]
 
                 gif_html = get_img_with_href(img,linkedin_profile_url)
                 st.markdown(gif_html, unsafe_allow_html=True)
