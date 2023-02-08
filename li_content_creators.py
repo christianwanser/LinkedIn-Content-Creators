@@ -160,7 +160,7 @@ def main_page():
         
 #        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
         
-        selected_profiles = raw_data.loc[raw_data["How long have you been creating data content on LinkedIn?"].str.contains("7-9 months", case=False)]
+        selected_profiles = raw_data.loc[raw_data["How long have you been creating data content on LinkedIn?"].str.contains("months", case=False)]
         
         st.write(selected_profiles)
         
