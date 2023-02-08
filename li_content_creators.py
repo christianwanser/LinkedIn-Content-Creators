@@ -142,7 +142,7 @@ def main_page():
     
     survey_qs
     
-    data["How long have you been creating data content on LinkedIn?"][0]
+    type(data["How long have you been creating data content on LinkedIn?"][0])
     
     st.write("How long have you been creating data content on LinkedIn?")
 
