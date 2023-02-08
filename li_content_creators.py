@@ -185,7 +185,16 @@ def main_page():
         
         for i in selected_profiles:
             profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
+            
+            img = os.path.abspath("images/profile_name"+".png")
+            linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
+
+            gif_html = get_img_with_href(img,linkedin_profile_url)
+            st.markdown(gif_html, unsafe_allow_html=True)
+            
             st.write(profile_name)
+            
+#            st.write('<p style="font-size:14px; color:black;">Christian<br>Wanser<br></p>',unsafe_allow_html=True)
         
     with col3:
         st.write(survey_qs["Options"][timeframe][3])
