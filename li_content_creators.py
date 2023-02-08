@@ -182,7 +182,7 @@ def main_page():
         
 #        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
 
-        selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist().values()
+        selected_profiles = list(data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.values)
         
 #        selected_profiles = data.loc[data["How long have you been creating data content on LinkedIn?"].str.contains("months", case=False)]
         
