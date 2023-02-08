@@ -127,7 +127,7 @@ def main_page():
         st.write(type(selected_time))
         st.write(selected_time)
         
-        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains("7-9 months", case=False)].tolist()
+        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
         
         st.write(selected_profiles)
         
@@ -151,7 +151,11 @@ def main_page():
         st.write(survey_qs["Options"][timeframe][1])
         
     with col2:
-        st.write(survey_qs["Options"][timeframe][2])
+        selected_time = survey_qs["Options"][timeframe][2]
+        st.write(type(selected_time))
+        st.write(selected_time)
+        
+        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
         
     with col3:
         st.write(survey_qs["Options"][timeframe][3])
