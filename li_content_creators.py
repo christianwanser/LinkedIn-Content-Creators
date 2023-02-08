@@ -156,7 +156,6 @@ def main_page():
 
             selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
             for i in selected_profiles:
-                st.write(i)
 #                profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
                 profile_name = data["What is your name (as shown on LinkedIn)?"][i]
                 
