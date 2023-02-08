@@ -65,6 +65,8 @@ survey_qs = pd.DataFrame(survey_qs_list,columns=["Original Q"])
 
 survey_qs["New Q"] = [re.findall('\[(.*?)\]', x)[0] if re.findall('\[(.*?)\]', x) != [] else "" for x in survey_qs["Original Q"]]
 
+survey_qs["Options"] = [["0%","1-25%","26-50%","51-75%","76-100%"] if "percent" in x else "" for x in survey_qs["Original Q"]]
+
 
 # enable html links in profile pics
 
