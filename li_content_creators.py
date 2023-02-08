@@ -186,7 +186,7 @@ def main_page():
         for i in selected_profiles:
             profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
             
-            img = os.path.abspath("images/profile_name"+".png")
+            img = os.path.abspath("images/%.png" % profile_name)
             linkedin_profile_url = data["What is your LinkedIn profile URL?"][selected_profiles[i]]
 
             gif_html = get_img_with_href(img,linkedin_profile_url)
