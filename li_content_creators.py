@@ -58,19 +58,19 @@ raw_data = pd.DataFrame(data_json)
 data = raw_data
 data["Str Time"] = data["How long have you been creating data content on LinkedIn?"]
 for x in data["How long have you been creating data content on LinkedIn?"]:
-    if x = "1-3 months":
+    if x == "1-3 months":
         data["Str Time"] = "one to three months"
-    elif x = "4-6 months":
+    elif x == "4-6 months":
         data["Str Time"] = "four to six months"
-    elif x = "7-9 months":
+    elif x == "7-9 months":
         data["Str Time"] = "seven to nine months"
-    elif x = "10-12 months":
+    elif x == "10-12 months":
         data["Str Time"] = "ten to twelve months"
-    elif x = "1-2 years":
+    elif x == "1-2 years":
         data["Str Time"] = "one to two years"
-    elif x = "3-4 years":
+    elif x == "3-4 years":
         data["Str Time"] = "three to four years"
-    elif x = "5-10 years":
+    elif x == "5-10 years":
         data["Str Time"] = "five to ten years"
 
 
