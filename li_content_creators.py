@@ -91,8 +91,8 @@ def get_img_with_href(local_img_path, target_url):
 
 def main_page():
 
-    col0 = st.columns([1])
-    with col0:
+    col1 = st.columns([1])
+    with col1:
 
         st.dataframe(raw_data,use_container_width=True)
         
