@@ -124,9 +124,11 @@ def main_page():
     col0,col1,col2,col3,col4,col5,col6,col7 = st.columns([1,1,1,1,1,1,1,1])
     with col0:
         selected_time = survey_qs["Options"][timeframe][0]
+        st.write(type(selected_time))
         st.write(selected_time)
         
         selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
+        
         st.write(selected_profiles)
         
         img = os.path.abspath("images/Christian Wanser.png")
