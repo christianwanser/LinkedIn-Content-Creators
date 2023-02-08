@@ -153,6 +153,12 @@ def main_page():
         with col_list[j]:
             selected_time = survey_qs["Options"][timeframe][j]
             st.write(selected_time)
+    
+    for j in range(0,len(col_list)):
+    
+        with col_list[j]:
+            selected_time = survey_qs["Options"][timeframe][j]
+#            st.write(selected_time)
 
             selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
             for i in selected_profiles:
