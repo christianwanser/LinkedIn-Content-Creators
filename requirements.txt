@@ -4,4 +4,4 @@ oauth2client
 pandas
 Pillow
 numpy
-re
+regex
