@@ -54,8 +54,24 @@ data_json = sheet.get_all_records()
 
 raw_data = pd.DataFrame(data_json)
 
-# set data type of timeframe to str
-raw_data["How long have you been creating data content on LinkedIn?"] = raw_data["How long have you been creating data content on LinkedIn?"].astype(str)
+# create new column for str of timeframe
+data = raw_data
+data["Str Time"] = data["How long have you been creating data content on LinkedIn?"]
+for x in data["How long have you been creating data content on LinkedIn?"]:
+    if x = "1-3 months":
+        data["Str Time"] = "one to three months"
+    elif x = "4-6 months":
+        data["Str Time"] = "four to six months"
+    elif x = "7-9 months":
+        data["Str Time"] = "seven to nine months"
+    elif x = "10-12 months":
+        data["Str Time"] = "ten to twelve months"
+    elif x = "1-2 years":
+        data["Str Time"] = "one to two years"
+    elif x = "3-4 years":
+        data["Str Time"] = "three to four years"
+    elif x = "5-10 years":
+        data["Str Time"] = "five to ten years"
 
 
 
@@ -116,7 +132,7 @@ def main_page():
 #    st.dataframe(survey_qs)
 
     
-    raw_data
+    data
     
     survey_qs
     
@@ -130,7 +146,7 @@ def main_page():
         st.write(type(selected_time))
         st.write(selected_time)
         
-        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
+        selected_profiles = data.index[data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
         
         st.write(selected_profiles)
         
@@ -160,7 +176,7 @@ def main_page():
         
 #        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
         
-        selected_profiles = raw_data.loc[raw_data["How long have you been creating data content on LinkedIn?"].str.contains("months", case=False)]
+        selected_profiles = data.loc[data["How long have you been creating data content on LinkedIn?"].str.contains("months", case=False)]
         
         st.write(selected_profiles)
         
