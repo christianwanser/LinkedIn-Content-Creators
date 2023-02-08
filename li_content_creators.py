@@ -149,7 +149,7 @@ def page1():
             selected_time = survey_qs["Options"][timeframe][j]
             st.write(selected_time)
             
-    st.markdown("---")
+    st.write("---")
     
     col0,col1,col2,col3,col4,col5,col6,col7 = st.columns([1,1,1,1,1,1,1,1])
     
