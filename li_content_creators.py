@@ -72,7 +72,7 @@ survey_qs["New Q"] = [re.findall('\[(.*?)\]', x)[0] if re.findall('\[(.*?)\]', x
 survey_qs["Options"] = [["0%","1-25%","26-50%","51-75%","76-100%"] if "percent" in x else "" for x in survey_qs["Original Q"]]
 #followers = survey_qs.loc[survey_qs["Original Q"].str.contains("followers", case=False)]
 followers = survey_qs.index[survey_qs["Original Q"].str.contains("followers", case=False)].tolist()[0]
-st.write(followers)
+survey_qs["New Q"][followers] = "Follower Count"
 
 
 # enable html links in profile pics
