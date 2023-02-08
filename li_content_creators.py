@@ -127,7 +127,7 @@ def get_img_with_href(local_img_path, target_url):
     return html_code
 
 
-def main_page():
+def page1():
 
 #    st.dataframe(raw_data,use_container_width=False)
 #
@@ -136,11 +136,6 @@ def main_page():
 #    st.dataframe(raw_data)
 
 #    st.dataframe(survey_qs)
-
-    
-    data
-    
-    survey_qs
     
     st.write("How long have you been creating data content on LinkedIn?")
 
@@ -215,7 +210,13 @@ def main_page():
 
 def page2():
 
-    col1, mid, col2 = st.columns([1,2,20])
+#    col1, mid, col2 = st.columns([1,2,20])
+    
+    data
+    
+    survey_qs
+    
+    
 #    with col1:
 #        st.image(os.path.abspath("images/LI logo.png"),
 #            width=100)
@@ -571,9 +572,9 @@ def page3():
 
 
 page_names_to_funcs = {
-    "LinkedIn Engagement": main_page,
-    "Your Dashboard": page2,
-    "Data Directions": page3
+    "Main Page": page1,
+    "Raw Data": page2,
+    "Blank": page3
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
