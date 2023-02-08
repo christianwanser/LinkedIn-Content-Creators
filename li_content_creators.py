@@ -123,7 +123,8 @@ def main_page():
 
     col0,col1,col2,col3,col4,col5,col6,col7 = st.columns([1,1,1,1,1,1,1,1])
     with col0:
-        st.write(survey_qs["Options"][timeframe][0])
+        selected_time = survey_qs["Options"][timeframe][0]
+        st.write(selected_time)
         
         img = os.path.abspath("images/Christian Wanser.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
