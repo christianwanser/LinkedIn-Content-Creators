@@ -76,7 +76,7 @@ survey_qs["New Q"][timeframe] = "Timeframe"
 
 # Define Answer Options
 
-survey_qs["Options"] = [list(["0%","1-25%","26-50%","51-75%","76-100%"]) if "percent" in x else "" for x in survey_qs["Original Q"]]
+survey_qs["Options"] = [list(["0%","1-25%","26-50%","51-75%","76-100%"]) if "percent" in x else [] for x in survey_qs["Original Q"]]
 time_list = list(["1-3 months","4-6 months","7-9 months","10-12 months","1-2 years","3-4 years","5-10 years","10+ years"])
 survey_qs["Options"][timeframe] = time_list
 
