@@ -95,9 +95,13 @@ def main_page():
 #
 #    st.dataframe(survey_qs,use_container_width=False)
 
-    st.dataframe(raw_data)
+#    st.dataframe(raw_data)
+
+#    st.dataframe(survey_qs)
     
-    st.dataframe(survey_qs)
+    raw_data
+    
+    survey_qs
     
     
     
