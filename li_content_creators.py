@@ -147,7 +147,8 @@ def page1():
     
         with col_list[j]:
             selected_time = survey_qs["Options"][timeframe][j]
-            st.write(selected_time)
+#            st.write(selected_time)
+            col_list[j].header(selected_time)
 
             selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
             for i in selected_profiles:
