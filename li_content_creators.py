@@ -14,7 +14,7 @@ import numpy as np
 
 #from PIL import Image, ImageDraw
 
-from st_aggrid import AgGrid
+#from st_aggrid import AgGrid
 
 #from PIL import Image
 #import requests
@@ -100,21 +100,10 @@ def main_page():
 
 #    st.dataframe(survey_qs)
 
-    plot_width = st.sidebar.slider("Plot Width", 1, 25, 8)
-    plot_height = st.sidebar.slider("Plot Height", 1, 10, 2)
-
     
     raw_data
     
     survey_qs
-    
-    AgGrid(
-        raw_data,
-        width = 100*plot_width,
-        height = round(0.66*100*plot_height),
-        theme = 'streamlit',
-        fit_columns_on_grid_load = True
-        )
     
     
     
