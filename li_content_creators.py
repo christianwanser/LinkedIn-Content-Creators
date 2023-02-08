@@ -127,7 +127,7 @@ def main_page():
         st.write(list(survey_qs["Options"].iloc[timeframe])[0])
         st.write(type(survey_qs["Options"].iloc[timeframe]))
         st.write(survey_qs["Options"].iloc[timeframe])
-        st.writte(survey_qs["Options"].iloc[follower_count][0])
+        st.write(survey_qs["Options"].iloc[follower_count][0])
         
         img = os.path.abspath("images/Christian Wanser.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
