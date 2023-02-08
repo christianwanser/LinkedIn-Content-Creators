@@ -149,7 +149,7 @@ def page1():
             selected_time = survey_qs["Options"][timeframe][j]
             st.write(selected_time)
             
-    st.markdown("----------------------------------------")
+    st.markdown("---")
     
     for j in range(0,len(col_list)):
     
