@@ -56,6 +56,8 @@ raw_data = pd.DataFrame(data_json)
 
 data = raw_data
 
+data["How long have you been creating data content on LinkedIn?"] = data["How long have you been creating data content on LinkedIn?"].astype(str)
+
 # create new column for str of timeframe
 
 #data["Str Time"] = data["How long have you been creating data content on LinkedIn?"]
