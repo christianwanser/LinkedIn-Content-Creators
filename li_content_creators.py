@@ -157,6 +157,7 @@ def main_page():
             selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
             st.write(selected_profiles)
             for i in selected_profiles:
+                st.write(i)
                 profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
                 
                 img = os.path.abspath(f'images/{profile_name}.png')
