@@ -162,8 +162,6 @@ def page1():
             col_list[j].write(selected_time)
 #            col_list[j].header(selected_time)
 
-            st.write("---")
-
             selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
             for i in selected_profiles:
 #                profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
