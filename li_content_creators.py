@@ -140,11 +140,11 @@ def page1():
     st.write("How long have you been creating data content on LinkedIn?")
 
 #    colt0,colt1,colt2,colt3,colt4,colt5,colt6,colt7 = st.columns([1,1,1,1,1,1,1,1])
-#    
+#
 #    colt_list = [colt0,colt1,colt2,colt3,colt4,colt5,colt6,colt7]
-#    
+#
 #    for j in range(0,len(colt_list)):
-#    
+#
 #        with colt_list[j]:
 #            selected_time = survey_qs["Options"][timeframe][j]
 #            st.write(selected_time)
@@ -161,6 +161,8 @@ def page1():
             selected_time = survey_qs["Options"][timeframe][j]
             col_list[j].write(selected_time)
 #            col_list[j].header(selected_time)
+
+            st.write("---")
 
             selected_profiles = data[data["How long have you been creating data content on LinkedIn?"] == selected_time].index.tolist()
             for i in selected_profiles:
