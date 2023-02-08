@@ -91,10 +91,12 @@ def get_img_with_href(local_img_path, target_url):
 
 def main_page():
 
+    col0 = st.columns([1])
+    with col0:
 
-    st.dataframe(raw_data,use_container_width=True)
-    
-    st.dataframe(survey_qs,use_container_width=True)
+        st.dataframe(raw_data,use_container_width=True)
+        
+        st.dataframe(survey_qs,use_container_width=True)
     
     
     
