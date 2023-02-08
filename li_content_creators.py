@@ -116,6 +116,8 @@ def page1():
 #    st.dataframe(survey_qs)
     
     st.title("How long have you been creating data content on LinkedIn?")
+    
+    st.write("---")
 
     colt0,colt1,colt2,colt3,colt4,colt5,colt6,colt7 = st.columns([1,1,1,1,1,1,1,1])
 
