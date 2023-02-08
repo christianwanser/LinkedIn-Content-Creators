@@ -92,7 +92,7 @@ def main_page():
 
     st.dataframe(raw_data)
     
-    survey_qs
+    st.dataframe(survey_qs)
     
     survey_qs["New Q"][6]
     
