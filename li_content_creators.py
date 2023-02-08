@@ -72,6 +72,8 @@ for x in data["How long have you been creating data content on LinkedIn?"]:
         data["Str Time"] = "three to four years"
     elif x == "5-10 years":
         data["Str Time"] = "five to ten years"
+    elif x == "10+ years":
+        data["Str Time"] = "ten plus years"
 
 
 
@@ -175,8 +177,10 @@ def main_page():
         st.write(selected_time)
         
 #        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
+
+        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"] == selected_time].tolist()
         
-        selected_profiles = data.loc[data["How long have you been creating data content on LinkedIn?"].str.contains("months", case=False)]
+#        selected_profiles = data.loc[data["How long have you been creating data content on LinkedIn?"].str.contains("months", case=False)]
         
         st.write(selected_profiles)
         
