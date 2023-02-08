@@ -63,7 +63,7 @@ survey_qs = pd.DataFrame(survey_qs_list,columns=["Original Q"])
 
 #survey_qs["New Q"] = [re.findall('\(([^)]+)', x) for x in survey_qs["Original Q"]]
 
-survey_qs["New Q"] = [str(re.findall('\[(.*?)\]', x))[0] for x in survey_qs["Original Q"]]
+survey_qs["New Q"] = [re.findall('\[(.*?)\]', x) for x in survey_qs["Original Q"]]
 
 
 # enable html links in profile pics
