@@ -126,6 +126,9 @@ def main_page():
         selected_time = survey_qs["Options"][timeframe][0]
         st.write(selected_time)
         
+        selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
+        st.write(selected_profiles)
+        
         img = os.path.abspath("images/Christian Wanser.png")
         linkedin_profile_url = 'https://www.linkedin.com/in/christian-wanser/'
 
