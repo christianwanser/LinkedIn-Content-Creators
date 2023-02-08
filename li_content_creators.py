@@ -112,7 +112,7 @@ def main_page():
         raw_data,
         width = 100*plot_width,
         height = round(0.66*100*plot_height),
-        theme = 'fresh',
+        theme = 'streamlit',
         fit_columns_on_grid_load = True
         )
     
