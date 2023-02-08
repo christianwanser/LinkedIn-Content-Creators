@@ -91,9 +91,13 @@ def get_img_with_href(local_img_path, target_url):
 
 def main_page():
 
-    st.dataframe(raw_data,use_container_width=False)
+#    st.dataframe(raw_data,use_container_width=False)
+#
+#    st.dataframe(survey_qs,use_container_width=False)
+
+    st.dataframe(raw_data)
     
-    st.dataframe(survey_qs,use_container_width=False)
+    st.dataframe(survey_qs)
     
     
     
