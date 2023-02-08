@@ -172,9 +172,13 @@ def page1():
                 linkedin_profile_url = data["What is your LinkedIn profile URL?"][i]
 
                 gif_html = get_img_with_href(img,linkedin_profile_url)
-                st.markdown(gif_html, unsafe_allow_html=True)
+#                st.markdown(gif_html, unsafe_allow_html=True)
+#
+#                st.write(profile_name)
+
+                col_list[j].markdown(gif_html, unsafe_allow_html=True)
                 
-                st.write(profile_name)
+                col_list[j].write(profile_name)
                 
 #                st.write('<p style="font-size:14px; color:black;">Christian<br>Wanser<br></p>',unsafe_allow_html=True)
     
