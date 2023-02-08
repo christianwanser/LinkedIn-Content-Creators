@@ -157,6 +157,8 @@ def main_page():
         
         selected_profiles = raw_data.index[raw_data["How long have you been creating data content on LinkedIn?"].str.contains(selected_time, case=False)].tolist()
         
+        st.write(selected_profiles)
+        
     with col3:
         st.write(survey_qs["Options"][timeframe][3])
         
