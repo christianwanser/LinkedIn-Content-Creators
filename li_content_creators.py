@@ -157,6 +157,10 @@ def page1():
     
     for j in range(0,len(col_list)):
     
+    col0,col1,col2,col3,col4,col5,col6,col7 = st.columns([1,1,1,1,1,1,1,1])
+    
+    col_list = [col0,col1,col2,col3,col4,col5,col6,col7]
+    
         with col_list[j]:
             selected_time = survey_qs["Options"][timeframe][j]
             col_list[j].write(selected_time)
