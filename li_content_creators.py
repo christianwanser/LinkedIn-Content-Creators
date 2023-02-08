@@ -184,7 +184,7 @@ def main_page():
         st.write(selected_profiles)
         
         for i in selected_profiles:
-            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profile[i]]
+            profile_name = data["What is your name (as shown on LinkedIn)?"][selected_profiles[i]]
             st.write(profile_name)
         
     with col3:
