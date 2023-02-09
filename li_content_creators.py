@@ -127,7 +127,7 @@ def page1():
 
         with colt_list[j]:
             selected_time = survey_qs["Options"][timeframe][j]
-            st.write(selected_time)
+            st.markdown(**selected_time**)
             
     st.write("---")
     
